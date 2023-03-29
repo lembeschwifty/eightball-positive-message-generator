@@ -2,7 +2,7 @@
 // This script randomly generates a message from 3 different arrays.
 // Very simple implementation using nested arrays of static datasets
 // 3/28/2023
-const eightballArray = [[1,2,3,4,5,6,7,8],
+const eightballArray = [['1 was rolled','2 was rolled','3 was rolled','4 was rolled','5 was rolled','6 was rolled','7 was rolled','8 was rolled'],
 [
     "Today is a day of fortune",
     "Today is a day of appreciation",
@@ -26,12 +26,10 @@ const eightballArray = [[1,2,3,4,5,6,7,8],
 ];
 
 const outputMessage = () => {
-    let randOne = Math.floor(Math.random() * 8);
-    let randTwo = Math.floor(Math.random() * 8);
-    let randThree = Math.floor(Math.random() * 8);
-    console.log(`${eightballArray[0][randOne]} was rolled.`);
-    console.log(`${eightballArray[1][randTwo]}`);
-    console.log(`${eightballArray[2][randThree]}`);
-}
+    for(let i=0;i<eightballArray.length; i++) {
+        randNumb = Math.floor(Math.random() * 8);
+        console.log(eightballArray[i][randNumb]);        
+    };
+};
 
 outputMessage();
