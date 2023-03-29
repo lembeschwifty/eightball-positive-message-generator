@@ -27,7 +27,7 @@ const eightballArray = [['1 was rolled','2 was rolled','3 was rolled','4 was rol
 
 const outputMessage = () => {
     for(let i=0;i<eightballArray.length; i++) {
-        randNumb = Math.floor(Math.random() * 8);
+        let randNumb = Math.floor(Math.random() * 8);
         console.log(eightballArray[i][randNumb]);        
     };
 };
